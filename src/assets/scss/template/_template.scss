@@ -1,0 +1,145 @@
+// These are the styles to make some of the templates look extra nice.
+// Feel free to remove these styles for production!
+
+// Body Styles
+body,
+html,
+.body {
+  background: #fff !important;
+}
+
+.container.header {
+  background: #f3f3f3;
+}
+
+.body-drip {
+  border-top: 8px solid #663399;
+}
+
+// Full Width Headers
+.header {
+  background: #8a8a8a;
+}
+
+.header .columns {
+  padding-bottom: 0;
+}
+
+.header p {
+  color: #fff;
+  padding-top: 15px;
+}
+
+.header .wrapper-inner {
+  padding: 20px;
+}
+
+.header .container {
+  background: transparent;
+}
+
+// Social Media
+table.button.facebook table td {
+  background: #3B5998 !important;
+  border-color: #3B5998;
+}
+
+table.button.twitter table td {
+  background: #1daced !important;
+  border-color: #1daced;
+}
+
+table.button.google table td {
+  background: #DB4A39 !important;
+  border-color: #DB4A39;
+}
+
+.wrapper.secondary {
+  background: #f3f3f3;
+}
+
+.container{
+  border: 1px solid $light-gray;
+}
+
+.menu, .menuwrapper{
+  background-color: $light-gray;
+  text-align: center;
+  .columns{
+    padding-bottom: 0;
+  }
+}
+
+.menu a{
+  //font-weight: bold;
+}
+
+
+
+
+/*
+ * Order details
+ */
+
+.section-header{
+  hr{
+    border-width: 2px;
+    border-style: solid;
+  }
+  h2{
+    font-weight: bold;
+    margin-bottom: 0;
+  }
+}
+
+.primary-color{
+  color: $primary-color;
+}
+
+.product-grid{
+  .headline, .product{
+    .columns:first-child{
+      //@extend .small-8;
+    }
+  }
+  .headline{
+    p{
+      font-weight: bold;
+    }
+  }
+  hr{
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+.product{
+  h3{
+    font-size: 16px;
+  }
+}
+.product-description p {
+	font-size: 14px;
+	margin-bottom: 2px;
+}
+
+.product-image th{
+  padding: 0 10px;
+}
+
+.subtotal, .shipping, .payment, .total, .tax{
+  p{
+    margin-bottom: 0;
+  }
+  .columns{
+    padding-bottom: 5px;
+  }
+  @media only screen and (max-width: #{$global-breakpoint}) {
+   .label{
+    margin-top: 10px;
+   }
+ }
+}
+
+.small-text{
+  font-size: 10px;
+}

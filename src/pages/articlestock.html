@@ -1,0 +1,48 @@
+{{> header}}
+<h1>
+Hallo,</h1>
+<p>
+  Happy Birthday {$billingaddress.firstname}!
+</p>
+<p>folgende Artikel haben den Mindestbestand unterschritten:</p>
+
+<spacer size="40"></spacer>
+
+
+<row class="product-grid">
+  <columns >
+    <row class="headline">
+      <columns small="6">
+        <p>Artikel</p>
+      </columns>
+      <columns small="2">
+        <p class="text-right">Bestand/Mindestbestand</p>
+      </columns>
+    </row>
+    {foreach from=$sJob.articles item=sArticle key=key}
+    <row class="product">
+      <columns small="6">
+        <row>
+          <columns class="product-description">
+            <h3>{$sArticle.name}</h3>
+            <p>{$sArticle.ordernumber}</p>
+          </columns>
+        </row>
+      </columns>
+      <columns >
+        <p class="text-right">{$sArticle.instock}/{$sArticle.stockmin}</p>
+      </columns>
+    </row>
+    <row>
+      <columns>
+        <hr>
+      </columns>
+    </row>
+    {/foreach}
+
+  </columns>
+
+</row>
+
+<spacer size="20"></spacer>
+{{> footer}}
