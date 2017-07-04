@@ -133,11 +133,11 @@ table.button.google table td {
   .columns{
     padding-bottom: 5px;
   }
+
   @media only screen and (max-width: #{$global-breakpoint}) {
-   .label{
-    margin-top: 10px;
-   }
- }
+    //border-top: 20px solid white;
+  }
+
 }
 
 .small-text{
