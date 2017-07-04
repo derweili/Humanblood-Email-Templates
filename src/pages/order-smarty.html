@@ -220,11 +220,11 @@ Bestätigung deiner Bestellung #{$sOrderNumber}</h1>
   <columns>
     <strong>Lieferadresse</strong>
     <p>
-      {if !empty($shippingaddress.company)} {$shippingaddress.company}<br>{/if
-      {if !empty($shippingaddress.firstname)} {$shippingaddress.company}<br>{/if
+      {if !empty($shippingaddress.company)} {$shippingaddress.company}<br>{/if}
       {$shippingaddress.firstname} {$shippingaddress.lastname}<br>
       {if !empty($shippingaddress.street)} {$shippingaddress.street}<br>{/if}
       {if {config name=showZipBeforeCity}}{$shippingaddress.zipcode} {$shippingaddress.city}{else}{$shippingaddress.city} {$shippingaddress.zipcode}{/if}<br>
+      {if !empty($shippingaddress.phone)} {$shippingaddress.phone}<br>{/if}
       {if !empty($additional.country.countryname)} {$additional.country.countryname}<br>{/if}
     </p>
   </columns>
