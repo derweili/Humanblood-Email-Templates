@@ -27,11 +27,11 @@ Bestätigung deiner Bestellung #{$sOrderNumber}</h1>
 
 
 <row>
-  <columns>
+  <columns small="6">
     <p><span class="primary-color">Bestellnummer:</span> {$sOrderNumber}</p>
   </columns>
-  <columns>
-    <p class="small-text-left text-right"><span class="primary-color">Bestelldatum:</span> {$sOrderDay|date:"DATE_MEDIUM"} {$sOrderTime|date:"TIME_SHORT"}</p>
+  <columns small="6">
+    <p class="text-right"><span class="primary-color">Bestelldatum:</span> {$sOrderDay|date:"DATE_MEDIUM"} {$sOrderTime|date:"TIME_SHORT"}</p>
   </columns>
 </row>
 
@@ -42,24 +42,24 @@ Bestätigung deiner Bestellung #{$sOrderNumber}</h1>
       <columns small="6" large="6">
         <p>Produkt</p>
       </columns>
-      <columns small="6" large="2">
+      <columns small="2" large="2">
         <p class="text-left">Anzahl</p>
       </columns>
-      <columns small="6" large="2">
+      <columns small="2" large="2">
         <p class="text-right">Preis</p>
       </columns>
-      <columns small="6" large="2">
+      <columns small="2" large="2">
         <p class="text-right">Summe</p>
       </columns>
     </row>
     {foreach item=details key=position from=$sOrderDetails}
     <row class="product">
-      <columns small="10" large="6">
+      <columns small="6" large="6">
         <row>
-          <columns small="4" medium="4" large="4" class="product-image">
+          <columns small="4" large="4" class="product-image">
             <img src="{$details.additional_details.image.thumbnails.0.retinaSource}" alt="" width="71" height="71">
           </columns>
-          <columns small="8" medium="8" large="8" class="product-description">
+          <columns small="8" large="8" class="product-description">
             <h3>{$details.articlename|wordwrap:49|indent:5}</h3>
             <p>{$details.ordernumber|fill:20}</p>
           </columns>
@@ -68,13 +68,13 @@ Bestätigung deiner Bestellung #{$sOrderNumber}</h1>
       <columns small="2" large="2">
         <p class="text-left">{$details.quantity|fill:6}</p>
       </columns>
-      <columns small="6" large="2">
-        <p class="small-text-left text-right">{$details.price|padding:8} EUR</p>
-        <p class="small-text-left small-text text-right">inkl. {$details.tax_rate|padding:8} % MwSt.</p>
+      <columns small="2" large="2">
+        <p class="text-right">{$details.price|padding:8} EUR</p>
+        <p class="small-text text-right">inkl. {$details.tax_rate|padding:8} % MwSt.</p>
       </columns>
-      <columns small="6" large="2">
-        <p class="small-text-left text-right">{$details.amount|padding:8} EUR</p>
-        <p class="small-text-left small-text text-right">inkl. {$details.tax_rate|padding:8} % MwSt.</p>
+      <columns small="2" large="2">
+        <p class="text-right">{$details.amount|padding:8} EUR</p>
+        <p class="small-text text-right">inkl. {$details.tax_rate|padding:8} % MwSt.</p>
       </columns>
     </row>
     <row>
@@ -148,6 +148,10 @@ Bestätigung deiner Bestellung #{$sOrderNumber}</h1>
 <row>
   <columns>
     <p>
+      {$additional.payment.description}
+    </p>
+    <p>
+      Weitere Informationen zu Ihrer Zahlung:
       {include file="string:`$additional.payment.additionaldescription`"}
     </p>
     <p>
